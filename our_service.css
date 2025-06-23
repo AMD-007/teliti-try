@@ -1,0 +1,687 @@
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Hide sections initially */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        /* Active class for when the section is in view */
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 100px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-text-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .company-name {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'garet', sans-serif;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0px;
+        }
+
+        nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-family: 'garet', sans-serif;
+    font-size: 1.2rem; /* Increased font size */
+    padding: 12px 20px; /* Adjusted padding for better spacing */
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px;
+}
+
+        /* Big Title with Video Background */
+        .video-title-section {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        /* Video */
+        .video-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text with Video Background */
+        .video-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #4a4a4a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 140px;
+            font-weight: 700;
+            mix-blend-mode: multiply;
+        }
+
+        /* Benefits / Features Section */
+        .benefits-section {
+    padding: 120px 20px;
+    text-align: center;
+    background:  url('icon/bck5.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #ffffff;
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency as needed */
+    z-index: 1;
+}
+
+.benefits-section h2,
+.benefits-section p,
+.benefit-images {
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-images img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+        .benefits-section h2 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .benefits-section h2::after {
+            content: '';
+            width: 60px;
+            height: 5px;
+            background-color: #007bff;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .benefits-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+        }
+
+        /* Image Grid for Benefit Section */
+        .benefit-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .benefit-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+    position: relative;
+}
+
+
+.benefit-item {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    margin: 10px;
+    text-align: center;
+}
+
+/* Wrapper for image, title, and description */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+/* Title styling */
+.benefit-title {
+    position: absolute;
+    bottom: 0;
+    left: 53%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    padding: 10px 10px; /* Reduced padding */
+    font-size: 1.2rem; /* Slightly smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px; /* Rounder corners for smaller box */
+    text-align: center;
+    z-index: 2;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 298px;
+    height: auto;
+}
+
+.benefit-title:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Description styling (initially hidden) */
+.benefit-description {
+    position: absolute;
+    top: 0%; 
+    left: 3%; 
+    right: 0%; 
+    bottom: 0; 
+    display: none; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 3;
+    font-size: 1rem;
+    overflow-y: auto; /* Scroll if content exceeds */
+}
+
+.benefit-description p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.benefit-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: white;
+    display: none;
+}
+
+.product-examples {
+    margin-top: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333333;
+    text-align: left;
+}
+
+.product-examples p {
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+.product-examples ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.product-examples li {
+    margin-bottom: 5px;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+
+
+        /* Services Section */
+        .services-section {
+    padding: 120px 20px;
+    background: url('icon/bck6.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #333;
+    z-index: 0; /* Set a low z-index for the section */
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional overlay for contrast */
+    z-index: 1; /* Keep the overlay behind the pyramid layout */
+}
+
+.services-header,
+.services-header h2 {
+    position: relative;
+    z-index: 2;
+}
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-header h2 {
+            font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: white;
+            position: relative;
+        }
+
+        .services-header h2::after {
+            content: '';
+            width: 60px;
+            height: 5px;
+            background-color: #007bff;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Pyramid Layout */
+        .services-pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 2; /* Set the pyramid layout above the background */
+}
+        .pyramid-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px 20px; /* Adjusted for logo space */
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-left: 5px solid #007bff;
+    position: relative;
+    overflow: hidden;
+    user-select: text;
+}
+
+.service-logo {
+    width: 140px; /* Adjust size as needed */
+    height: 140px; /* Maintain square ratio */
+    margin-bottom: 20px; /* Space between logo and text */
+}
+
+.service-logo-x{
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Maintain square ratio */
+    margin-bottom: 20px; /* Space between logo and text */
+}
+
+.service-box:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3);
+}
+
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    transition: transform 0.4s ease; /* Smoother transition */
+}
+
+.service-box:hover::before {
+    transform: scale(1.2); /* Keep this for subtle emphasis */
+}
+
+
+.service-box h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+        .service-box ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Contact Us Section */
+.contact-section {
+    background: url('icon/bck8.jpg') no-repeat center center; /* Set bck7.jpg as background */
+    background-size: cover; /* Ensure the image covers the entire section */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative; /* Required for overlay positioning */
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    z-index: 1;
+}
+
+.contact-section h2, .contact-section p, .contact-section a {
+    position: relative;
+    z-index: 2; /* Ensures text and link are above the background and overlay */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s, color 0.3s;
+}
+
+.contact-section a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            margin-top: 0px;
+        }
+
+        footer p {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+     /* Technology Partner Section */
+.partner-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 128, 0.8), rgba(220, 220, 221, 0.9)), url('icon/bck4.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.partner-section h2 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #DCDCDD;
+    position: relative;
+}
+
+.partner-section h2::after {
+    content: '';
+    width: 100px;
+    height: 6px;
+    background-color: #3C9EE6;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.partner-category {
+    margin: 0 auto 70px; /* Centers the container horizontally and adds bottom margin */
+    width: 1000px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.partner-category h3 {
+    font-size: 2.5rem;
+    color: #3C9EE6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.partner-category h3::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #3C9EE6;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.partner-logos img {
+    width: 150px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+    background-color: #fff; /* Add white background for better contrast */
+    filter: grayscale(100%);
+    transition: filter 0.5s, transform 0.5s, box-shadow 0.5s;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    margin: 20px 0; /* Adds 20px gap on top and bottom of each logo */
+}
+
+
+.partner-logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(60, 158, 230, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .partner-section h2 {
+        font-size: 2.8rem;
+    }
+
+    .partner-category h3 {
+        font-size: 2.2rem;
+    }
+
+    .partner-logos img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .partner-category h3 {
+        font-size: 1.8rem;
+    }
+
+    .partner-logos img {
+        width: 90px;
+    }
+}
+
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            nav ul li a {
+                padding: 5px 10px;
+            }
+
+            .pyramid-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .service-box {
+                width: 100%;
+            }
+
+            .award-box img {
+                width: 150px;
+            }
+
+            .benefit-images {
+                flex-direction: column;
+            }
+
+            .benefit-images img {
+                width: 100%;
+                max-width: 350px;
+            }
+        }

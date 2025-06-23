@@ -1,0 +1,551 @@
+/* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Hide sections initially */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        /* Active class for when the section is in view */
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 100px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-text-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .company-name {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'garet', sans-serif;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0px;
+        }
+
+        nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-family: 'garet', sans-serif;
+    font-size: 1.2rem; /* Increased font size */
+    padding: 12px 20px; /* Adjusted padding for better spacing */
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px;
+}
+
+
+        /* Hero Section Styling */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vid/vidT.mp4') no-repeat center center/cover;
+            color: white;
+        }
+
+        #heroVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 80%;
+            margin: 0 auto;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-content .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .hero-content .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section (Our Services) Styling */
+.about {
+    background: url('icon/bck3.jpeg') no-repeat center center; /* Set your background image */
+    background-size: cover; /* Make sure the background covers the entire section */
+    padding: 80px 20px;
+    position: relative; /* Establish a positioning context for the overlay */
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(244, 244, 249, 0.8); /* Overlay for better readability */
+    z-index: 1; /* Ensure this is below text content */
+}
+
+.about-header {
+    position: relative; /* Ensure header is positioned above overlay */
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 2; /* Bring header above overlay */
+}
+
+.about-header h2 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+}
+
+.about-header h2::after {
+    content: '';
+    width: 60px;
+    height: 5px;
+    background-color: #007bff;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-container {
+    position: relative; /* Allow the container to sit above the overlay */
+    z-index: 2; /* Bring content above overlay */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-box p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.about-box img {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.view-services-btn {
+    display: inline-block;
+    padding: 12px 40px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px auto;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    max-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    position: relative; /* Position relative to allow z-index */
+    z-index: 3; /* Bring button above overlay and content */
+}
+
+.view-services-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+        /* Why Trust Us Section */
+.why-trust-us {
+    background: url('icon/bck2.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.why-trust-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 125, 207, 0.6); /* Overlay effect for better readability */
+    z-index: 1; /* Overlay is at a lower level */
+}
+
+.why-trust-us-header {
+    position: relative;
+    z-index: 2; /* Ensure header appears above the overlay */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.why-trust-us-header h2 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.why-trust-us-header h2::after {
+    content: '';
+    width: 60px;
+    height: 5px;
+    background-color: #007bff;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.why-trust-us-container {
+    position: relative;
+    z-index: 2; /* Bring content above overlay */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-trust-us-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    width: 22%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-trust-us-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.why-trust-us-box h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.why-trust-us-box p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.why-trust-us-box video {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+        /* Our Company Section */
+.our-company {
+    background: url('icon/bck1.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.our-company::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 125, 207, 0.6); /* Overlay effect for better readability */
+    z-index: 1;
+}
+
+.our-company-container {
+    position: relative;
+    z-index: 2; /* Bring content above overlay */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Styling for social media icons */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-top: 20px; /* Space between button and icons */
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #DCDCDD; /* Light color for the icons */
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+}
+
+.instagram {
+    background-image: url('icon/x2.png'); /* Replace with actual Instagram logo path */
+}
+
+.facebook {
+    background-image: url('icon/x1.png'); /* Replace with actual Facebook logo path */
+}
+
+.social-icon:hover {
+    opacity: 0.8; /* Slight transparency effect on hover */
+}
+
+
+/* Remaining CSS stays the same */
+
+
+        /* Left Side: Text Styling */
+        .company-text {
+            flex: 1;
+            color: white;
+            padding-right: 20px;
+        }
+
+        .company-text h2 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to the heading */
+}
+
+.company-text p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds a shadow to the paragraph text */
+}
+
+        .company-text .btn.watch-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: white;
+            color: #017dcf;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .company-text .btn.watch-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Right Side: White Square Image Container */
+        .company-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-square {
+            background-color: white;
+            width: 500px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for effect */
+        }
+
+        .image-square img {
+            max-width: 70%;
+            margin-bottom: 20px;
+        }
+
+        .award-image {
+            max-width: 50%; /* Adjust the size of the award image */
+            margin-top: -10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            margin-top: 0px;
+        }
+
+        footer p {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .our-company-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .company-text {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .image-square {
+                width: 300px;
+                height: 300px;
+            }
+
+            .image-square img {
+                max-width: 60%;
+            }
+
+            .award-image {
+                max-width: 40%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul li a {
+                padding: 5px 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .btn {
+                padding: 10px 25px;
+            }
+
+            .about-container,
+            .why-trust-us-container {
+                flex-direction: column;
+            }
+
+            .about-box,
+            .why-trust-us-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .btn {
+                padding: 8px 20px;
+            }
+        }

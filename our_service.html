@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Services - Teliti Infotech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="our_service.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo and Company Name Wrapper -->
+            <div class="logo-text-wrapper">
+                <div class="logo">
+                    <img src="icon/teliti.png" alt="Teliti Infotech Logo">
+                </div>
+                <div class="company-name">TELITI INFOTECH SDN BHD</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our_service.html">Services</a></li>
+                    <li><a href="our_story.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Big Title Section with Video -->
+    <section class="video-title-section">
+        <video class="video-background" autoplay muted loop>
+        <source src="vid/vvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1 class="video-title">TELITI INFOTECH</h1>
+    </section>
+
+    <!-- Benefits / Features Section -->
+    <section class="benefits-section">
+    <h2>BENEFIT / FEATURE</h2>
+    <p>TELITI INFOTECH Services assist companies in increasing their competitive advantage through the integration of advanced information technology systems.</p>
+    <div class="benefit-images">
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y7.jpg" alt="Feature 1">
+                <div class="benefit-title" onclick="toggleDescription(this)">Enterprise Networking</div>
+                <div class="benefit-description">
+                    <p>Comprehensive solutions for designing, implementing, and optimizing networks.</p>
+                    <div class="product-examples">
+                        <p><strong>LAN/WAN Solutions:</strong></p>
+                         <ul>
+                            <li>Cisco</li><li>Allied Telesis</li><li>EnGenius</li><li>Aruba</li><li>Grandstream</li><li>Peplink</li>
+                        </ul>
+                        <p><strong>Structured Cabling:</strong></p>
+                         <ul>
+                            <li>CommScope</li><li>MMC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y12.jpg" alt="Feature 2">
+                <div class="benefit-title" onclick="toggleDescription(this)">Software Defined Solutions</div>
+                <div class="benefit-description">
+                    <p>IT solutions to improve flexibility and scalability through virtualization.</p>
+                    <div class="product-examples">
+                        <p><strong>SDN (Software-Defined Networking):</strong></p>
+                         <ul>
+                            <li>Aruba Networks</li><li>Alied Telesis</li>
+                        </ul>
+                        <p><strong>SDDC (Software-Defined Data Centers):</strong></p>
+                         <ul>
+                            <li>VMware</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y15.jpg" alt="Feature 3">
+                <div class="benefit-title" onclick="toggleDescription(this)">Enterprise Security</div>
+                <div class="benefit-description">
+                    <p>Protect organizational assets with advanced security solutions.</p>
+                    <div class="product-examples">
+                        <p><strong>Cybersecurity Solutions:</strong></p>
+                         <ul>
+                            <li>Cisco</li><li>Sangfor</li><li>NetGate</li>
+                        </ul>
+                        <p><strong>Power Management:</strong></p>
+                         <ul>
+                            <li>APC</li><li>Vertiv</li><li>EnGenius</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y2.jpg" alt="Feature 4">
+                <div class="benefit-title" onclick="toggleDescription(this)">IP Security Surveillance</div>
+                <div class="benefit-description">
+                    <p>Advanced surveillance systems for monitoring and securing environments.</p>
+                    <div class="product-examples">
+                        <p><strong>Network Cameras:</strong></p>
+                         <ul>
+                            <li>Axis Communications</li><li>Hikvision</li><li>Dahua Technology</li>
+                        </ul>
+                        <p><strong>Video Management Systems (VMS):</strong></p>
+                         <ul>
+                            <li>Milestone Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y3.jpg" alt="Feature 5">
+                <div class="benefit-title" onclick="toggleDescription(this)">Computer Engineering</div>
+                <div class="benefit-description">
+                    <p>Comprehensive IT support for enterprise systems.</p>
+                    <div class="product-examples">
+                        <p><strong>Servers:</strong></p>
+                         <ul>
+                            <li>HP</li><li>Lenovo</li>
+                        </ul>
+                        <p><strong>Storage Solutions:</strong></p>
+                         <ul>
+                            <li>HP</li><li>Synology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y11.jpg" alt="Feature 6">
+                <div class="benefit-title" onclick="toggleDescription(this)">Broadband Networks</div>
+                <div class="benefit-description">
+                    <p>High-speed internet solutions for various business needs.</p>
+                    <div class="product-examples">
+                        <p><strong>Wireless Broadband:</strong></p>
+                         <ul>
+                            <li>Cambium Networks</li><li>Ubiquiti</li><li>EnGenius</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y5.jpg" alt="Feature 7">
+                <div class="benefit-title" onclick="toggleDescription(this)">Wireless Networking</div>
+                <div class="benefit-description">
+                    <p>Enable secure and efficient wireless connectivity.</p>
+                    <div class="product-examples">
+                        <p><strong>Wi-Fi Solutions:</strong></p>
+                         <ul>
+                            <li>Ruckus</li><li>EnGenius</li><li>Cisco</li><li>Aruba</li><li>Ubiquiti</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="image-wrapper">
+                <img src="vid/y1.jpg" alt="Feature 8">
+                <div class="benefit-title" onclick="toggleDescription(this)">Technology Integration & Consulting</div>
+                <div class="benefit-description">
+                    <p>Expert guidance on selecting, implementing, and optimizing technology solutions.</p>
+                    <div class="product-examples">
+                        <p><strong>Systems Integration:</strong></p>
+                         <ul>
+                            <li>Avaya</li>
+                        </ul>
+                        <p><strong>Consulting Services:</strong></p>
+                         <ul>
+                            <li>Customized tech solutions for client needs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-header">
+            <h2>OUR SERVICES</h2>
+        </div>
+
+        <!-- Pyramid Layout -->
+        <div class="services-pyramid">
+        <div class="pyramid-row">
+        <div class="service-box">
+            <img src="icon/neww.png" alt="Logo" class="service-logo-x">
+        </div>
+        </div>
+
+    <!-- Second Row -->
+    <div class="pyramid-row">
+        <div class="service-box">
+            <img src="icon/icon_44.jpg" alt="Enterprise Networking Logo" class="service-logo">
+            <h3>Enterprise Networking</h3>
+            <p>LAN/WAN design, installation, support, hardware diagnostics, structured cabling, network security, and optimization.</p>
+        </div>
+        <div class="service-box">
+            <img src="icon/icon_55.jpg" alt="Enterprise Security Logo" class="service-logo">
+            <h3>Enterprise Security</h3>
+            <p>Protect critical assets with tailored security solutions, ensuring data integrity and compliance.</p>
+        </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="pyramid-row">
+        <div class="service-box">
+            <img src="icon/icon_1.png" alt="IP Security Surveillance Logo" class="service-logo">
+            <h3>IP Security Surveillance</h3>
+            <p>Advanced CCTV systems for crime prevention and evidence gathering.</p>
+        </div>
+        <div class="service-box">
+            <img src="icon/icon_2.png" alt="Computer Engineering Logo" class="service-logo">
+            <h3>Computer Engineering</h3>
+            <p>Troubleshooting, maintenance, and support for enterprise IT systems.</p>
+        </div>
+        <div class="service-box">
+            <img src="icon/icon_3.jpg" alt="Computer Engineering Logo" class="service-logo">
+            <h3>Software Defined</h3>
+            <p>Centralized, scalable solutions with software-defined networking and storage.</p>
+        </div>
+    </div>
+</div>
+    </section>
+
+
+    <section class="partner-section">
+    <h2>TECHNOLOGY PARTNERS</h2>
+
+    <!-- Structured Cabling Systems -->
+    <div class="partner-category">
+        <h3>STRUCTURED CABLING SYSTEMS</h3>
+        <div class="partner-subcategory">
+            <div class="partner-logos">
+                <a href="https://www.commscope.com/product-type/" target="_blank">
+                    <img src="vid/a1.png" alt="CommScope Logo">
+                </a>
+                <a href="https://www.multimedia-connect.com/" target="_blank">
+                    <img src="vid/a22.png" alt="MMC Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- IP Security Surveillance -->
+    <div class="partner-category">
+        <h3>IP SECURITY SURVEILLANCE</h3>
+        <div class="partner-subcategory">
+            <div class="partner-logos">
+                <a href="https://www.axis.com/products" target="_blank">
+                    <img src="vid/aa4.png" alt="Axis Communications Logo">
+                </a>
+                <a href="https://www.hikvision.com/my/products/" target="_blank">
+                    <img src="vid/a18.png" alt="Hikvision Logo">
+                </a>
+                <a href="https://www.milestonesys.com/" target="_blank">
+                    <img src="vid/a5.png" alt="Milestone Logo">
+                </a>
+                <a href="https://www.dahuasecurity.com/products" target="_blank">
+                    <img src="vid/a19.png" alt="Dahua Technology Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Computer Engineering -->
+    <div class="partner-category">
+        <h3>COMPUTER ENGINEERING</h3>
+        <div class="partner-subcategory">
+            <div class="partner-logos">
+                <a href="https://www.hp.com/us-en/shop/mdp/networking--1" target="_blank">
+                    <img src="vid/a6.png" alt="HP Logo">
+                </a>
+                <a href="https://www.lenovo.com/my/en/servers-storage/" target="_blank">
+                    <img src="vid/a7.png" alt="Lenovo Logo">
+                </a>
+                <a href="https://www.hikvision.com/my/products/" target="_blank">
+                    <img src="vid/a18.png" alt="Hikvision Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Network, Security, & Software Defined -->
+    <div class="partner-category">
+        <h3>NETWORK, SECURITY, & SOFTWARE DEFINED</h3>
+        <div class="partner-subcategory">
+            <div class="partner-logos">
+                <a href="https://www.arubanetworks.com/" target="_blank">
+                    <img src="vid/aa9.png" alt="Aruba Networks Logo">
+                </a>
+                <a href="https://www.ruckusnetworks.com/products/" target="_blank">
+                    <img src="vid/a100.png" alt="Ruckus Networks Logo">
+                </a>
+                <a href="https://store.engeniustech.com/" target="_blank">
+                    <img src="vid/a21.png" alt="EnGenius Logo">
+                </a>
+                <a href="https://www.cisco.com/c/en_my/products/index.html#~products-by-technology" target="_blank">
+                    <img src="vid/a13.png" alt="Cisco Logo">
+                </a>
+            </div>
+            <div class="partner-logos">
+                <a href="https://www.alliedtelesis.com/my/en/products" target="_blank">
+                    <img src="vid/a12.png" alt="Allied Telesis Logo">
+                </a>
+                <a href="https://www.avaya.com/en/" target="_blank">
+                    <img src="vid/a110.png" alt="Avaya Logo">
+                </a>
+                <a href="https://www.cambiumnetworks.com/products/" target="_blank">
+                    <img src="vid/a15.png" alt="Cambium Networks Logo">
+                </a>
+                <a href="https://www.hp.com/us-en/shop/mdp/networking--1" target="_blank">
+                    <img src="vid/a6.png" alt="HP Logo">
+                </a>
+                <a href="https://www.sangfor.com/cybersecurity/products" target="_blank">
+                    <img src="vid/a16.png" alt="Sangfor Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Us Section -->
+    <section class="contact-section">
+        <h2>CONTACT US</h2>
+        <p>Get in touch with us to learn more about how we can assist your company with our integrated technology solutions.</p>
+        <a href="contact.html">Contact Us Today</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TELITI INFOTECH SDN BHD</p>
+    </footer>
+
+    <!-- JavaScript for Scroll-triggered animations -->
+    <script>
+        // Intersection Observer to trigger animations
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    <script>
+function toggleDescription(titleElement) {
+    const description = titleElement.nextElementSibling;
+    const isVisible = description.style.display === "block";
+
+    // Hide all other descriptions
+    document.querySelectorAll('.benefit-description').forEach(desc => {
+        desc.style.display = "none";
+    });
+
+    // Toggle the clicked description
+    description.style.display = isVisible ? "none" : "block";
+}
+
+    </script>
+</body>
+</html>

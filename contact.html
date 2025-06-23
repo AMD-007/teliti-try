@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | Teliti Infotech</title>
+    <link href="https://maps.app.goo.gl/hySEBXZizS552e557" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo and Company Name Wrapper -->
+            <div class="logo-text-wrapper">
+                <div class="logo">
+                    <img src="icon/teliti.png" alt="Teliti Infotech Logo">
+                </div>
+                <div class="company-name">TELITI INFOTECH SDN BHD</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our_service.html">Services</a></li>
+                    <li><a href="our_story.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+    <div class="contact-section">
+        <div class="transparent-box"></div>
+        <div class="contact-header">
+            <h1>CONTACT US</h1>
+        </div>
+
+        <div class="contact-content">
+            <p>Whether you have questions about our services, pricing, or any other topic, our dedicated team is here to assist you. Please complete the form, and we will respond promptly to address your needs.</p>
+            
+<!-- Contact Form -->
+<div>
+    <form action="https://formsubmit.co/luqman.ablatif@gmail.com" method="POST" class="contact-form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" id="name" required placeholder="Your Name">
+        <input type="email" name="email" id="email" required placeholder="Your Email">
+        <input type="text" name="subject" id="subject" required placeholder="Subject">
+        <textarea name="message" id="message" required placeholder="Message"></textarea>
+        <!-- Google reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+</script>
+
+
+
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <div>
+                <h2>Our Address</h2>
+                <p>Lot 79, Bandar Seri Kerteh,<br>24300, Kerteh, Terengganu</p>
+            </div>
+            <div>
+                <h2>Business Hours</h2>
+                <p>08:30 AM – 05.30 PM<br>Sunday – Thursday</p>
+            </div>
+            <div>
+                <h2>Get in Touch</h2>
+                <p>Phone: +609-826-5773<br>Email: info@teliti.com</p>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=4.503992,103.443991&z=17&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Our Partner Section -->
+        <div class="partner-section">
+            <h2>PRODUCT SECTION</h2>
+            <p>Professional certificate from partners</p>
+            <div class="partners-container">
+                <div class="partner-logo">
+                    <img src="icon/z1.jpeg" alt="Partner 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="icon/z3.png" alt="Partner 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="icon/z2.png" alt="Partner 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Clients Section -->
+<div class="clients-section">
+    <h2>OUR CLIENTS</h2>
+    <p>Trusted by companies across multiple industries</p>
+    
+    <div class="carousel-container">
+        <div class="carousel-track-container">
+            <ul class="carousel-track">
+                <li class="client-logo"><img src="client/c01.png" alt="Client 1"></li>
+                <li class="client-logo"><img src="client/c2.png" alt="Client 2"></li>
+                <li class="client-logo"><img src="client/c3.png" alt="Client 3"></li>
+                <li class="client-logo"><img src="client/c4.png" alt="Client 4"></li>
+                <li class="client-logo"><img src="client/c5.png" alt="Client 5"></li>
+                <li class="client-logo"><img src="client/c6.png" alt="Client 6"></li>
+                <li class="client-logo"><img src="client/c7.png" alt="Client 7"></li>
+                <li class="client-logo"><img src="client/c8.png" alt="Client 8"></li>
+		        <li class="client-logo"><img src="client/c9.png" alt="Client 9"></li>
+		        <li class="client-logo"><img src="client/c10.png" alt="Client 10"></li>
+		        <li class="client-logo"><img src="client/c11.png" alt="Client 11"></li>
+		        <li class="client-logo"><img src="client/c12.png" alt="Client 12"></li>
+		        <li class="client-logo"><img src="client/c13.png" alt="Client 13"></li>
+                <li class="client-logo"><img src="client/c20.png" alt="Client 14"></li>
+		        <li class="client-logo"><img src="client/c15.png" alt="Client 15"></li>
+		        <li class="client-logo"><img src="client/c17.png" alt="Client 17"></li>
+		        <li class="client-logo"><img src="client/c180.png" alt="Client 18"></li>
+		        <li class="client-logo"><img src="client/c19.png" alt="Client 19"></li>
+		        <li class="client-logo"><img src="client/c200.png" alt="Client 20"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TELITI INFOTECH SDN BHD</p>
+    </footer>
+
+    <!-- JavaScript for Scroll-triggered animations -->
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector('.carousel-track');
+    const logos = track.children;
+
+    // Clone all logos to create a seamless loop
+    const clone = track.cloneNode(true);
+    track.append(...clone.children);
+});
+
+        // Intersection Observer to trigger animations
+const sections = document.querySelectorAll('section, main');
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// Carousel Slider
+const track = document.querySelector('.carousel-track');
+const leftButton = document.querySelector('.left-btn');
+const rightButton = document.querySelector('.right-btn');
+const logos = Array.from(track.children);
+const logoWidth = logos[0].getBoundingClientRect().width;
+
+let currentIndex = 0;
+
+// Initially set the first logo as the current logo
+logos[currentIndex].classList.add('current-logo');
+
+// Arrange logos side by side
+logos.forEach((logo, index) => {
+    logo.style.left = logoWidth * index + 'px';
+});
+
+// Move to the next logo
+const moveToLogo = (track, currentIndex, targetIndex) => {
+    const amountToMove = logoWidth * targetIndex;
+    track.style.transform = 'translateX(-' + amountToMove + 'px)';
+
+    // Remove 'current-logo' from the old logo and add to the new one
+    logos[currentIndex].classList.remove('current-logo');
+    logos[targetIndex].classList.add('current-logo');
+};
+    </script>
+</body>
+</html>

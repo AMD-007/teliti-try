@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Story | Teliti Infotech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="our_story.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo and Company Name Wrapper -->
+            <div class="logo-text-wrapper">
+                <div class="logo">
+                    <img src="icon/teliti.png" alt="Teliti Infotech Logo">
+                </div>
+                <div class="company-name">TELITI INFOTECH SDN BHD</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our_service.html">Services</a></li>
+                    <li><a href="our_story.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <main>
+        <div class="our-story-header">
+            <h1>ABOUT US</h1>
+        </div>
+        <div class="our-story-content">
+            <p>TELITI INFOTECH SDN BHD, <strong>established on May 21, 2015,</strong> is a trusted leader in Malaysia's IT industry. Registered with the Malaysian Ministry of Finance, we specialize in delivering <strong>End-to-End Solutions, Including the Supply, Installation, Testing, Commissioning, Maintenance, and Servicing of Computer and Network Systems.</strong> Our diverse clientele includes government bodies, agencies, government-linked companies, financial institutions, and private businesses across Malaysia.</p>
+            <p>The name 'TELITI', inspired by the Malay word for <strong>"Meticulous" and "Skillful",</strong> embodies our business philosophy of precision and excellence. This commitment has earned us a reputation as one of Malaysia's premier providers of IT solutions and services.</p>
+            <p>At TELITI INFOTECH, we are dedicated to maintaining the <strong>Highest Standards of Quality, Reliability, and Innovation</strong> in every endeavor.</p>
+            <img src="icon/stf.png" alt="Our Team" class="our-story-image">
+        </div>
+    </main>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="mission-header">
+            <h2>OUR MISSION</h2>
+        </div>
+        <div class="mission-content">
+            <p>Our <strong>mission</strong> is to be the trusted and preferred provider of Information Technology Solutions.</p>
+            <p> We <strong>aim</strong> to serve as a one-stop center, delivering comprehensive products and services tailored to meet our clients' needs.</p>
+            <p>We are <strong>committed</strong> to becoming a leading domestic company by expanding our regional business network, consistently delivering exceptional value, and upholding our industry leadership.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TELITI INFOTECH SDN BHD</p>
+    </footer>
+
+    <!-- JavaScript for Scroll-triggered animations -->
+    <script>
+        // Intersection Observer to trigger animations
+        const sections = document.querySelectorAll('section, main');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
